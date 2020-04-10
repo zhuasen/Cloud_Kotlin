@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: me.panpf:sketch:2.7.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb4177a5dcb697215bf8e295cb56f73b/jetified-sketch-2.7.1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb4177a5dcb697215bf8e295cb56f73b/jetified-sketch-2.7.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb4177a5dcb697215bf8e295cb56f73b/jetified-sketch-2.7.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.panpf/sketch/2.7.1/cb0e82d3075732ce47ce69794643aa88429be914/sketch-2.7.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.panpf/sketch/2.7.1/48f1d588da72cdf2601469dba850e232f65c3e5b/sketch-2.7.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

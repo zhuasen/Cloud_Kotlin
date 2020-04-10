@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--这是选择图片界面的确定按钮的圆弧背景-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+
+            <!--外边框曲度要大一些-->
+            <corners android:radius="18dip"/>
+
+            <!--外边框颜色-->
+            <solid android:color="#0091EA"/>
+        </shape>
+    </item>
+
+    <!--外边框的大小-->
+    <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:top="1dp">
+        <shape android:shape="rectangle">
+            <!--边框角度-->
+            <corners android:radius="15dip"/>
+            <!--内部颜色-->
+            <solid android:color="#2AAAF8" />
+        </shape>
+    </item>
+
+</layer-list>
