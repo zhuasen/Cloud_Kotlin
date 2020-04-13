@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#AEEA00</color>
+    <color name="colorPrimaryDark">#47CAB8</color>
+    <color name="colorAccent">#2962FF</color>
+    <color name="skyBlue">#34AFFA</color>
+    <color name="progressBarColor">#FFAB00</color>
+    <color name="downloadBarColor">#FFC0CB</color>
+    <color name="testColor">#E26A6A</color>
+    <color name="mildWhite">#CAC4EF</color>
+    <color name="randomColor">#7700FF</color>
+
 </resources>

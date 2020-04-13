@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--注册的布局:账号密码，登录注册-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Login">
+
+    <!-- 账号图片与特别的EditText-->
+    <LinearLayout
+        android:id="@+id/accountInLogin_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/account"/>
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/accountInLogin_EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="23sp"
+            android:hint="@string/accountHint"
+            android:maxLines = "2"
+            app:et_dividerColor="#00C853"
+            app:et_dividerErrorColor="#DD2C00"
+            app:et_dividerHeight="2dp"
+            app:et_dividerPadding="5dp"
+            app:et_labelEnable="true"
+            app:et_labelTextSize="18sp"
+            app:et_labelTextColor="#304FFE"
+            app:et_supportMode="helper"
+            app:et_supportTextSize="15sp"
+            app:et_helper="用户名只能由小写字母、数字和“-”组成"
+            app:et_supportTextErrorColor="#FF6D00"
+            app:et_supportTextColor="#A4DDE6" />
+    </LinearLayout>
+
+    <!-- 密码图片与特别的EditText-->
+    <LinearLayout
+        android:id="@+id/passwordInLogin_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountInLogin_Layout">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="2"
+            android:contentDescription="@string/passwordHint"
+            android:src="@drawable/key"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <com.rey.material.widget.EditText
+                android:id="@+id/passwordInLogin_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/passwordHint"
+                android:inputType="textPassword"
+                android:textSize="25sp"
+                app:et_dividerColor="#00C853"
+                app:et_dividerErrorColor="#DD2C00"
+                app:et_dividerHeight="2dp"
+                app:et_dividerPadding="5dp"
+                app:et_labelEnable="true"
+                app:et_labelTextColor="#304FFE"
+                app:et_labelTextSize="18sp"
+                app:et_supportMode="helper"
+                app:et_supportTextErrorColor="#FF6D00"
+                app:et_supportTextSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/showPasswordInLogin_Button"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/hide"
+                android:contentDescription="@string/showPasswordHint"
+                app:layout_constraintBottom_toBottomOf="@id/passwordInLogin_EditText"
+                app:layout_constraintRight_toRightOf="@id/passwordInLogin_EditText"
+                app:layout_constraintTop_toTopOf="@id/passwordInLogin_EditText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <!--记住密码-->
+    <LinearLayout
+        android:id="@+id/rememberPasswordInLogin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/passwordInLogin_Layout"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/rememberPasswordInLogin_CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/rememberPassword"
+            android:textColor="#091768"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- 注册与登录按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/rememberPasswordInLogin_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <com.rey.material.widget.Button
+            android:id="@+id/registerInLogin_Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/round_button"
+            android:text="@string/registerWord"
+            android:textSize="30sp"
+            app:rd_cornerRadius="10dp"
+            app:rd_enable = "true"
+            app:rd_maskType="rectangle"
+            app:rd_delayClick="untilRelease"
+            app:rd_rippleType = "touch"
+            app:rd_backgroundColor = "#B6E6D8"
+            app:rd_rippleColor="#F9E8FB"
+            app:rd_maxRippleRadius="70dp" />
+
+        <com.rey.material.widget.Button
+            android:id="@+id/loginInLogin_Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_button"
+            android:text="@string/LoginWord"
+            android:textSize="30sp"
+            app:rd_enable = "true"
+            app:rd_cornerRadius="10dp"
+            app:rd_maskType="rectangle"
+            app:rd_delayClick="untilRelease"
+            app:rd_rippleType = "touch"
+            app:rd_backgroundColor = "#B6E6D8"
+            app:rd_rippleColor="#F9E8FB"
+            app:rd_maxRippleRadius="70dp"/>
+
+    </LinearLayout>
+
+    <!--加载progressBar,五颜六色-->
+    <com.tt.whorlviewlibrary.WhorlView
+        android:id="@+id/loginProgressBar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        app:whorlview_circle_colors="#FFAB00_#FFC0CB_#698FF8_#FF0066_#AA00FF"
+        app:whorlview_circle_speed="270"
+        app:whorlview_parallax="fast"
+        app:whorlview_strokeWidth="10"
+        app:whorlview_sweepAngle="140">
+    </com.tt.whorlviewlibrary.WhorlView>
+</androidx.constraintlayout.widget.ConstraintLayout>
