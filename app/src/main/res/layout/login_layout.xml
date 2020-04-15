@@ -24,7 +24,8 @@
             android:layout_weight="2"
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/account"/>
+            android:src="@drawable/account"
+            android:contentDescription="@string/newAccountHint" />
 
         <com.rey.material.widget.EditText
             android:id="@+id/accountInLogin_EditText"

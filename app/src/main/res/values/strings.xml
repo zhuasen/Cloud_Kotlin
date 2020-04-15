@@ -6,4 +6,14 @@
     <string name="registerWord">注册</string>
     <string name="LoginWord">登陆</string>
     <string name="showPasswordHint">showPassword?</string>
+    <string name="newAccountHint">请输入一个新账号</string>
+    <string name="assurePasswordHint">请再次输入密码</string>
+    <string name="backUpWord">备份图片</string>
+    <string name="changePasswordWord">修改密码</string>
+    <string name="deleteAccountWord">注销账号</string>
+    <string name="downloadWord">下载图片</string>
+    <string name="welcomeWord">%1$s,欢迎使用</string>
+    <string name="oldPasswordHint">请输入原密码</string>
+    <string name="newPasswordHint">新密码</string>
+    <string name="assureForChangeText">确认修改</string>
 </resources>

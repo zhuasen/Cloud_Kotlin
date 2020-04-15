@@ -11,23 +11,25 @@ import com.alibaba.sdk.android.oss.common.utils.OSSUtils
 
 class OssApplication : Application(){
 
-    //获取全局Context
+
     companion object{
-        lateinit var context:Context
+        //获取全局Context
+        lateinit var Context:Context
+        //oss实例
+        lateinit var oss:OSS
     }
 
     //创建oss所需
     private lateinit var ossProvider:OSSCredentialProvider
-    private  val accessKey = ossInfo.ossAccessKeyId
-    private  val accessSecret = ossInfo.ossAccessKeySecret
-    private val endPoint = ossInfo.ossEndpoint
+    private  val accessKey = OssInformation.ossAccessKeyId
+    private  val accessSecret = OssInformation.ossAccessKeySecret
+    private val endPoint = OssInformation.ossEndpoint
 
-    //oss实例
-    lateinit var oss:OSS
+
 
     override fun onCreate() {
         super.onCreate()
-        context = applicationContext
+        Context = applicationContext
 
         ossProvider = object : OSSCustomSignerCredentialProvider(){
             override fun signContent(content: String?): String {
@@ -42,7 +44,7 @@ class OssApplication : Application(){
             maxConcurrentRequest = 6    // 最大并发请求书
             maxErrorRetry = 2   // 失败后最大重试次数
         }
-        oss = OSSClient(context, endPoint, ossProvider, conf)
+        oss = OSSClient(Context, endPoint, ossProvider, conf)
     }
 
 }

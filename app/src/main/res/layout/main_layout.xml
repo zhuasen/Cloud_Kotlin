@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--主页面的四个按钮：线性排列-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <!--用户信息的欢迎栏-->
+    <TextView
+        android:id="@+id/welcome_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:textColor="#04000B" />
+
+    <!--备份按钮-->
+    <com.rey.material.widget.Button
+        android:id="@+id/choosePictureForUpload_Button"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/backUpWord"
+        android:textSize="30sp"
+        android:background="@drawable/round_button"
+        app:rd_enable = "true"
+        app:rd_cornerRadius="10dp"
+        app:rd_maskType="rectangle"
+        app:rd_delayClick="untilRelease"
+        app:rd_rippleType = "touch"
+        app:rd_backgroundColor = "#B6E6D8"
+        app:rd_rippleColor="#F9E8FB"
+        app:rd_maxRippleRadius="70dp"/>
+
+    <!--选择图片下载按钮-->
+    <com.rey.material.widget.Button
+        android:id="@+id/downloadPictureFromCloud_Button"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/downloadWord"
+        android:textSize="30sp"
+        android:background="@drawable/round_button"
+        app:rd_enable = "true"
+        app:rd_cornerRadius="10dp"
+        app:rd_maskType="rectangle"
+        app:rd_delayClick="untilRelease"
+        app:rd_rippleType = "touch"
+        app:rd_backgroundColor = "#B6E6D8"
+        app:rd_rippleColor="#F9E8FB"
+        app:rd_maxRippleRadius="70dp"/>
+
+    <!--用户修改密码按钮-->
+    <com.rey.material.widget.Button
+        android:id="@+id/changePasswordInMain_Button"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/changePasswordWord"
+        android:textSize="30sp"
+        android:background="@drawable/round_button"
+        app:rd_enable = "true"
+        app:rd_cornerRadius="10dp"
+        app:rd_maskType="rectangle"
+        app:rd_delayClick="untilRelease"
+        app:rd_rippleType = "touch"
+        app:rd_backgroundColor = "#B6E6D8"
+        app:rd_rippleColor="#F9E8FB"
+        app:rd_maxRippleRadius="70dp"/>
+
+    <!--注销账户按钮-->
+    <com.rey.material.widget.Button
+        android:id="@+id/deleteAccount_Button"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/deleteAccountWord"
+        android:textSize="30sp"
+        android:background="@drawable/round_button"
+        app:rd_enable = "true"
+        app:rd_cornerRadius="10dp"
+        app:rd_maskType="rectangle"
+        app:rd_delayClick="untilRelease"
+        app:rd_rippleType = "touch"
+        app:rd_backgroundColor = "#B6E6D8"
+        app:rd_rippleColor="#F9E8FB"
+        app:rd_maxRippleRadius="70dp"/>
+
+
+</LinearLayout>

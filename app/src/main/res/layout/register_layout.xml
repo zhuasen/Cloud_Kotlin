@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--注册布局：三根EditText，注册按钮-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Register">
+
+    <!--三个线性布局包围住三个EditText-->
+    <!--新账户-->
+    <LinearLayout
+        android:id="@+id/accountInRegister_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="60dp">
+
+        <ImageView
+            android:src="@drawable/account"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/newAccountHint" />
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/accountInRegister_EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:hint="@string/newAccountHint"
+            android:textSize="25sp"
+            app:et_dividerColor="#00C853"
+            app:et_dividerErrorColor="#DD2C00"
+            app:et_dividerHeight="2dp"
+            app:et_dividerPadding="5dp"
+            app:et_labelEnable="true"
+            app:et_labelTextSize="18sp"
+            app:et_labelTextColor="#304FFE"
+            app:et_supportMode="helper"
+            app:et_helper="用户名只能由小写字母、数字和“-”组成,其中不能以“-”开头和结尾，总长度不超过19个字符"
+            app:et_supportTextErrorColor="#FF6D00"
+            app:et_supportTextSize="15sp"
+            app:et_supportTextColor="#A0DAF1"/>
+    </LinearLayout>
+
+    <!--新密码-->
+    <LinearLayout
+        android:id="@+id/passwordInRegister_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/accountInRegister_Layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/key"
+            android:contentDescription="@string/passwordHint" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <com.rey.material.widget.EditText
+                android:id="@+id/passwordInRegister_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="30dp"
+                android:hint="@string/passwordHint"
+                android:textSize="25sp"
+                android:inputType="textPassword"
+                app:et_dividerColor="#00C853"
+                app:et_dividerErrorColor="#DD2C00"
+                app:et_dividerHeight="2dp"
+                app:et_dividerPadding="5dp"
+                app:et_labelEnable="true"
+                app:et_labelTextSize="18sp"
+                app:et_labelTextColor="#304FFE"
+                app:et_supportMode="helper"
+                app:et_supportTextSize="15dp"
+                app:et_supportTextErrorColor="#FF6D00"/>
+
+            <ImageButton
+                android:id="@+id/showPasswordInRegister_Button"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/passwordInRegister_EditText"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/hide"
+                android:contentDescription="@string/showPasswordHint" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <!--确认新密码-->
+    <LinearLayout
+        android:id="@+id/assurePasswordInRegister_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/passwordInRegister_Layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:src="@drawable/key"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/assurePasswordHint" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <com.rey.material.widget.EditText
+                android:id="@+id/assurePasswordInRegister_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="30dp"
+                android:hint="@string/assurePasswordHint"
+                android:textSize="25sp"
+                android:inputType="textPassword"
+                app:et_dividerColor="#00C853"
+                app:et_dividerErrorColor="#DD2C00"
+                app:et_dividerHeight="2dp"
+                app:et_dividerPadding="5dp"
+                app:et_labelEnable="true"
+                app:et_labelTextSize="18sp"
+                app:et_labelTextColor="#304FFE"
+                app:et_supportMode="helper"
+                app:et_supportTextSize="15sp"
+                app:et_supportTextErrorColor="#FF6D00"/>
+
+            <ImageButton
+                android:id="@+id/showAssurePasswordInRegister_Button"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/assurePasswordInRegister_EditText"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/hide"
+                android:contentDescription="@string/showPasswordHint" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <!--注册按钮-->
+    <com.rey.material.widget.Button
+        android:id="@+id/registerInRegister_Button"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_button"
+        android:text="@string/registerWord"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assurePasswordInRegister_layout"
+        app:rd_backgroundColor="#B6E6D8"
+        app:rd_cornerRadius="10dp"
+        app:rd_delayClick="untilRelease"
+        app:rd_enable="true"
+        app:rd_maskType="rectangle"
+        app:rd_maxRippleRadius="70dp"
+        app:rd_rippleColor="#F9E8FB"
+        app:rd_rippleType="touch" />
+
+    <!--加载progressBar,五颜六色-->
+    <com.tt.whorlviewlibrary.WhorlView
+        android:id="@+id/registerProgressBar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        app:whorlview_circle_colors="#FFAB00_#FFC0CB_#698FF8_#FF0066_#AA00FF"
+        app:whorlview_circle_speed="270"
+        app:whorlview_parallax="fast"
+        app:whorlview_strokeWidth="10"
+        app:whorlview_sweepAngle="140">
+    </com.tt.whorlviewlibrary.WhorlView>
+</androidx.constraintlayout.widget.ConstraintLayout>
