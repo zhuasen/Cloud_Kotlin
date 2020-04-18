@@ -13,7 +13,11 @@
     <string name="deleteAccountWord">注销账号</string>
     <string name="downloadWord">下载图片</string>
     <string name="welcomeWord">%1$s,欢迎使用</string>
+    <string name="alreadySelectHint"> %1$s确定(%2$s)%3$s</string>
     <string name="oldPasswordHint">请输入原密码</string>
     <string name="newPasswordHint">新密码</string>
     <string name="assureForChangeText">确认修改</string>
+    <string name="selectPictureWord">选择图片</string>
+    <string name="selectAllWord">全选</string>
+    <string name="sureWord">确定</string>
 </resources>

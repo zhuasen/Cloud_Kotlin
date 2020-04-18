@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.rey5137:material:1.2.5@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/47c2b35a9552eacce17dabf7df342ab5/jetified-material-1.2.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/47c2b35a9552eacce17dabf7df342ab5/jetified-material-1.2.5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/30129a32368a069b0255b10aef71fc8b/jetified-material-1.2.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/30129a32368a069b0255b10aef71fc8b/jetified-material-1.2.5/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.rey5137/material/1.2.5/ca014b931c86b6f766208b6eabc4f983e93c540b/material-1.2.5-javadoc.jar!/" />

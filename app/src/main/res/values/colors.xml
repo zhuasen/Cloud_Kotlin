@@ -3,11 +3,14 @@
     <color name="colorPrimary">#AEEA00</color>
     <color name="colorPrimaryDark">#47CAB8</color>
     <color name="colorAccent">#2962FF</color>
-    <color name="skyBlue">#34AFFA</color>
+    <color name="buttonBlue">#2AAAF8</color>
     <color name="progressBarColor">#FFAB00</color>
     <color name="downloadBarColor">#FFC0CB</color>
-    <color name="testColor">#E26A6A</color>
+    <color name="selectAllColor">#130657</color>
     <color name="mildWhite">#CAC4EF</color>
     <color name="randomColor">#7700FF</color>
-
+    <color name="green">#47CAB8</color>
+    <color name="orange">#FFAB00</color>
+    <color name="red">#E26A6A</color>
+    <color name="mildPurple">#CAC4EF</color>
 </resources>

@@ -7,18 +7,18 @@
         <shape android:shape="rectangle">
 
             <!--外边框曲度要大一些-->
-            <corners android:radius="18dip"/>
+            <corners android:radius="10dip"/>
 
             <!--外边框颜色-->
-            <solid android:color="#0091EA"/>
+            <solid android:color="#2AAAF8"/>
         </shape>
     </item>
 
     <!--外边框的大小-->
-    <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:top="1dp">
+    <item android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp">
         <shape android:shape="rectangle">
             <!--边框角度-->
-            <corners android:radius="15dip"/>
+            <corners android:radius="8dip"/>
             <!--内部颜色-->
             <solid android:color="#2AAAF8" />
         </shape>

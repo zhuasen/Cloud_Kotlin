@@ -7,11 +7,11 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.example.cloudkotlin"
+        applicationId "cn.kotlin.cloud"
         minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,7 +31,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.71"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
@@ -56,7 +56,7 @@ dependencies {
     //一直用的各种提示框UI，用得很多
     implementation 'com.github.f0ris.sweetalert:library:1.6.2'
     //阿里云
-    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.3'
     //进度框progressBar的UI
     implementation 'com.tt:whorlviewlibrary:1.0.3'
     //图片伸缩（这是一个集成了多个功能的图片库）

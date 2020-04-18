@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--自己写的“选择图片”下载布局，分成最上面的标题栏和中间与底部的布局
+**可以做的更逼真：将下方的选择栏改为不可见，只有长摁图片选择时才浮出来，图片选择框一开始也是隐藏的
+当不选择时下方选择栏变灰色，当摁退出时先退出下方选择栏-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SelectPicture">
+
+    <!-- 最上边的栏-->
+    <RelativeLayout
+        android:id="@+id/selectPictureToolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#E4EAEC">
+
+        <!--“选择图片”的text-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#0B2368"
+            android:textSize="30sp"
+            android:text="@string/selectPictureWord" />
+
+        <!--返回按钮-->
+        <Button
+            android:id="@+id/backInSelectPicture_Button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/back"/>
+
+    </RelativeLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/selectPictureBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:background="#DDE7ED">
+
+        <!--刷新布局-->
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/imageForChoose_RefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?attr/actionBarSize"
+            app:srlEnableAutoLoadMore="false"
+            app:srlEnableLoadMore="true"
+            app:srlHeaderHeight="150dp"
+            app:srlReboundDuration="300"
+            app:srlPrimaryColor="@color/mildPurple">
+
+            <!--最最重要的recyclerView -->
+            <com.scwang.smartrefresh.header.PhoenixHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imageForChoose_RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlTextSizeTitle="18sp"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <!--滚动到顶部的悬浮球-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/scrollToTop_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:backgroundTint="#E4EAEC"
+            android:src="@drawable/top"
+            app:backgroundTint="#0FD1EF"
+            android:foregroundGravity="center"
+            android:tint="@color/buttonBlue"
+            app:fabSize="auto"
+            android:layout_gravity="bottom|end"
+            app:layout_behavior="com.kotlin.cloud.usefulClass.ScrollAwareFABBehavior"/>
+        <!-- 底部工具栏-->
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:id="@+id/selectBottomAppBar"
+            app:layout_behavior="com.kotlin.cloud.usefulClass.ScrollAwareBottomBehavior"
+            android:backgroundTint="@color/zhihu_album_dropdown_thumbnail_placeholder">
+
+            <!--用ConstraintLayout进行具体布局-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 左边的全选-->
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="30dp"
+                    app:layout_constraintLeft_toLeftOf="parent" >
+                    <Button
+                        android:id="@+id/selectAllImage_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start|center_vertical"
+                        android:text="@string/selectAllWord"
+                        android:textSize="26sp"
+                        android:textColor="#130657"
+                        android:background="@color/zhihu_album_dropdown_thumbnail_placeholder" />
+                </LinearLayout>
+
+                <!--右边确定按钮-->
+                <com.rey.material.widget.Button
+                    android:id="@+id/sureInSelectPicture_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="35dp"
+                    android:background="@drawable/ok_round_button"
+                    android:text="@string/sureWord"
+                    android:textColor="#FBFBF8"
+                    android:textSize="22sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:rd_enable = "true"
+                    app:rd_cornerRadius="5dp"
+                    app:rd_maskType="rectangle"
+                    app:rd_delayClick="untilRelease"
+                    app:rd_rippleType = "touch"
+                    app:rd_rippleColor="#F9E8FB"
+                    app:rd_maxRippleRadius="30dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

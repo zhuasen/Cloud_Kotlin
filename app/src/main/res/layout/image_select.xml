@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--选择图片中recyclerview的单个元素布局-->
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginRight="1dp"
+    android:layout_marginBottom="1dp"
+    app:cardCornerRadius="5dp">
+
+    <!--每张图片，其中transitionName是与big_image_layout对应的-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:id="@+id/singleImageForChoose_ImageView"
+        android:scaleType="centerCrop"
+        android:transitionName="sharedView"
+        android:contentDescription="@string/selectPictureWord" />
+
+    <!--每个图片是否被选中的CheckBox-->
+    <CheckBox
+        android:id="@+id/singleCheckBoxForChoose"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_gravity="end|top"
+        android:buttonTint="#DDE7ED"/>
+
+</androidx.cardview.widget.CardView>
